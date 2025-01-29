@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input id="num" placeholder="Enter a number"><br>
+  <button onclick="showFactorial()">Find Factorial</button>
+  <p>Result: <span id="res"></span></p>
+  <script>
+    function factorial(n) {
+      if (n < 0) return "Invalid Input";
+      let fact = 1;
+      for (let i = 1; i <= n; i++) fact *= i;
+      return fact;
+    }
+    function showFactorial() {
+      const n = +document.getElementById('num').value;
+      document.getElementById('res').innerText = factorial(n);
+    }
+  </script>
+</body>
+</html>
